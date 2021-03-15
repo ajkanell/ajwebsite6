@@ -30,10 +30,10 @@ const ContactForm = () => {
       };
 
       await emailjs.send(
-        "service_a552r78",
-        "template_y4vw0lz",
+        process.env.SERVICE_ID,
+        process.env.TEMPLATE_ID,
         templateParams,
-        "user_BvQFVj7d8htumC1sGdxFz"
+        process.env.USER_ID
       );
 
       reset();
