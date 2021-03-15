@@ -1,18 +1,38 @@
-export default TV = () => {
+export default function TV({ title, src }) {
   return (
     <>
-      <h3>video title</h3>
-      <div className="overflow-hidden pb-32 relative h-0">
+      <h3 className="mb-4 sm:pt-10 pt-8">{title}</h3>
+      <div
+        className="sm:hidden"
+        style={{
+          position: "relative",
+          paddingBottom: "56.25%" /* 16:9 */,
+          height: 0,
+        }}
+      >
         <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/Vn9DgBBIqgg"
-          frameborder="0"
-          className="left-0 top-0 h-full w-full absolute"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+          }}
+          src={src}
+          allowFullScreen
+          style={{ border: 0 }}
+          sandbox="allow-scripts allow-same-origin allow-popups allow-presentation"
+        />
+      </div>
+      <div className="hidden sm:block">
+        <iframe
+          width="640"
+          height="360"
+          src={src}
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
         ></iframe>
       </div>
     </>
   );
-};
+}

@@ -6,7 +6,7 @@ export const siteTitle = "A.J KANELL | PLAY-BY-PLAY BROADCASTER";
 
 export default function Layout({ children, title }) {
   return (
-    <div className=" ">
+    <div className=" font-norm">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <title>{title}</title>

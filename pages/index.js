@@ -7,15 +7,22 @@ export default function Home() {
   return (
     <>
       <Layout title="A.J. KANELL | PLAY-BY-PLAY BROADCASTER">
-        <div className="rounded-full"></div>
+        <Image
+          src="/images/home.png"
+          alt="A.J Kanell"
+          width={166}
+          height={166}
+        />
 
-        <h1 className="mt-5 text-center text-7xl font-bold">A.J. KANELL</h1>
+        <h1 className=" mt-8 text-center text-8xl lg:text-9xl ">A.J. KANELL</h1>
 
-        <h3 className="mt-3 ">PLAY-BY-PLAY BROADCASTER - ALBANY, NY</h3>
+        <h3 className="text-xl lg:text-2xl">
+          PLAY-BY-PLAY BROADCASTER - ALBANY, NY
+        </h3>
 
-        <div className="mt-8">
+        <div className="mt-8 font-norm">
           <Link href="/contact">
-            <a className="px-4 py-3 flex bg-green-300 text-black border-2 border-black shadow-offset-black">
+            <a className="font-semibold px-4 py-3 flex  text-black border-4  border-black shadow-offset-black">
               CONTACT ME
             </a>
           </Link>

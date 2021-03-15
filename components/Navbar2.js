@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { HiMenu, HiOutlineX } from "react-icons/hi";
 import Link from "next/link";
+import { RiMenuLine, RiCloseLine } from "react-icons/ri";
 
-export default function Navbar2({ fixed }) {
+export default function Navbar2() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <>
-      <nav className="">
-        <div className="lg:max-w-5xl sm:max-w-3xl relative flex flex-wrap items-center py-3 mb-3 px-8 mx-auto justify-between">
+      <nav className="font-norm ">
+        <div className="lg:max-w-4xl sm:max-w-3xl relative flex flex-wrap items-center pt-3 mb-3 px-8 mx-auto justify-between ">
           <div className="w-full lg:w-auto flex items-center justify-between ">
             <Link href="/">
               <a className="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-black">
@@ -19,7 +20,7 @@ export default function Navbar2({ fixed }) {
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              {navbarOpen ? <HiOutlineX /> : <HiMenu />}
+              {navbarOpen ? <RiCloseLine /> : <RiMenuLine />}
             </button>
           </div>
           <div
@@ -32,8 +33,8 @@ export default function Navbar2({ fixed }) {
               <li className="nav-item">
                 <Link href="/tv">
                   <a
-                    className=" py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
-                    href="#pablo"
+                    onClick={() => setNavbarOpen(false)}
+                    className=" py-2 flex items-center text-sm uppercase font-bold leading-snug text-black hover:opacity-75"
                   >
                     <span className="">tv</span>
                   </a>
@@ -42,8 +43,8 @@ export default function Navbar2({ fixed }) {
               <li className="nav-item">
                 <Link href="/radio">
                   <a
-                    className=" py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
-                    href="#pablo"
+                    onClick={() => setNavbarOpen(false)}
+                    className=" py-2 flex items-center text-sm uppercase font-bold leading-snug text-black hover:opacity-75"
                   >
                     <span className="">radio</span>
                   </a>
@@ -51,7 +52,7 @@ export default function Navbar2({ fixed }) {
               </li>
               <li className="nav-item">
                 <a
-                  className=" py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
+                  className=" py-2 flex items-center text-sm uppercase font-bold leading-snug text-black hover:opacity-75"
                   href="https://sticktosports.medium.com"
                   target="_blank"
                 >
@@ -60,7 +61,7 @@ export default function Navbar2({ fixed }) {
               </li>
               <li className="nav-item">
                 <a
-                  className=" py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
+                  className=" py-2 flex items-center text-sm uppercase font-bold leading-snug text-black hover:opacity-75"
                   href="https://podcasts.apple.com/us/podcast/coaches-4-change/id1536640509"
                   target="_blank"
                 >
@@ -70,8 +71,8 @@ export default function Navbar2({ fixed }) {
               <li className="nav-item">
                 <Link href="/resume">
                   <a
-                    className=" py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
-                    href="#pablo"
+                    onClick={() => setNavbarOpen(!navbarOpen)}
+                    className=" py-2 flex items-center text-sm uppercase font-bold leading-snug text-black hover:opacity-75"
                   >
                     <span className="">resume</span>
                   </a>
@@ -80,8 +81,8 @@ export default function Navbar2({ fixed }) {
               <li className="nav-item">
                 <Link href="/contact">
                   <a
-                    className=" py-2 flex items-center text-xs uppercase font-bold leading-snug text-black hover:opacity-75"
-                    href="#pablo"
+                    onClick={() => setNavbarOpen(!navbarOpen)}
+                    className=" py-2 flex items-center text-sm uppercase font-bold leading-snug text-black hover:opacity-75"
                   >
                     <span className="">contact me</span>
                   </a>
