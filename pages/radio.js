@@ -28,7 +28,7 @@ export async function getStaticProps() {
 
   // Fetch all entries of content_type `radio`
   const posts = await client
-    .getEntries({ content_type: "radio" })
+    .getEntries({ content_type: "radio", order: "-fields.priority" })
     .then((response) => response.items);
 
   return {

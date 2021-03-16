@@ -148,7 +148,7 @@ const ContactForm = () => {
                       aria-describedby="message-max"
                     ></textarea>
                     {errors.message && (
-                      <span className="errorMessage">
+                      <span className="text-red-500">
                         Please enter a message
                       </span>
                     )}

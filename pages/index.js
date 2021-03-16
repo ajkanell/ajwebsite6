@@ -16,9 +16,7 @@ export default function Home() {
 
         <h1 className=" mt-8 text-center text-8xl lg:text-9xl ">A.J. KANELL</h1>
 
-        <h3 className="text-xl lg:text-2xl">
-          PLAY-BY-PLAY BROADCASTER - ALBANY, NY
-        </h3>
+        <h3 className="text-xl lg:text-2xl">PLAY-BY-PLAY BROADCASTER</h3>
 
         <div className="mt-8 font-norm">
           <Link href="/contact">
