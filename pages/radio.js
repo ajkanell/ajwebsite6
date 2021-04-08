@@ -1,7 +1,7 @@
 import PageLayout from "../components/PageLayout";
 import Radio from "../components/Radio";
 
-export default function Radio({ posts = [] }) {
+export default function RadioPage({ posts = [] }) {
   return (
     <PageLayout title="RADIO | A.J. Kanell">
       <h1 className="text-6xl font-sans mb-12">RADIO</h1>
