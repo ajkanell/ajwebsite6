@@ -30,10 +30,10 @@ const ContactForm = () => {
       };
 
       await emailjs.send(
-        process.env.SERVICE_ID,
-        process.env.TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
         templateParams,
-        process.env.USER_ID
+        process.env.NEXT_PUBLIC_USER_ID
       );
 
       reset();
@@ -48,7 +48,7 @@ const ContactForm = () => {
       <h1 className="text-7xl font-sans lg:mb-8">CONTACT ME</h1>
 
       <div className="pb-12 lg:max-w-3xl w-full  sm:px-6 lg:px-8">
-        <div className="relative bg-white shadow-xl ">
+        <div className="relative bg-white sm:shadow-md ">
           <h2 className="sr-only">Contact us</h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -59,7 +59,7 @@ const ContactForm = () => {
               <form
                 onSubmit={handleSubmit(onSubmit)}
                 noValidate
-                class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+                className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
               >
                 <div>
                   <label
@@ -155,10 +155,10 @@ const ContactForm = () => {
                   </div>
                 </div>
 
-                <div class="sm:col-span-2 sm:flex sm:justify-end">
+                <div className="sm:col-span-2 sm:flex sm:justify-end">
                   <button
                     type="submit"
-                    class="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto"
+                    className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto"
                   >
                     Send
                   </button>
