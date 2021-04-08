@@ -8,7 +8,7 @@ export default function Radio({ title, src }) {
           width="100%"
           height="200"
           scrolling="no"
-          frameborder="no"
+          frameBorder="no"
           src={src}
         ></iframe>
       </div>
