@@ -5,7 +5,7 @@ export default function tv({ posts = [] }) {
   console.log({ posts });
   return (
     <PageLayout title="TV | A.J. Kanell">
-      <h1 className="mb-4 text-6xl font-sans">Television</h1>
+      <h1 className="mb-4 text-gray-900 text-7xl font-sans mt-4">Television</h1>
 
       <div className="lg:text-center text-left mb-12">
         {posts.map((post) => (

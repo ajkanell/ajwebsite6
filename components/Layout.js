@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 
 export const siteTitle = "A.J KANELL | PLAY-BY-PLAY BROADCASTER";
 
@@ -10,12 +8,15 @@ export default function Layout({ children, title }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <title>{title}</title>
-        <meta name="description" content="A.J Kanell's personal website." />
+        <meta
+          name="description"
+          content="View a selection of A.J. Kanell’s broadcast work - Learn about A.J.‘s wide-ranging experience - Get in touch with A.J."
+        />
         <meta property="og:image" content={siteTitle} />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <main className="flex flex-col items-center justify-center min-h-screen xl:-mt-28 lg:-mt-10 -mt-28">
+      <main className="flex justify-center items-center min-h-screen sm:mb-12 -mt-20 sm:-mt-12">
         {children}
       </main>
     </div>

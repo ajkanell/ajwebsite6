@@ -1,20 +1,18 @@
 import Image from "next/image";
 import PageLayout from "../components/PageLayout";
-import { HiDownload } from "react-icons/hi";
 
 export default function Resume({ posts }) {
-  console.log(`https:${posts[0].fields.resumePic.fields.file.url}`);
   return (
     <>
       <PageLayout title="RESUME | A.J KANELL">
-        <h1 className="text-6xl font-sans mb-8">RESUME</h1>
+        <h1 className="text-7xl text-gray-900 font-sans mb-8">RESUME</h1>
         {/* <div className="flex items-center space-x-1 font-semibold mb-2">
           <h3>Download</h3>
           <div className="w-6 h-6 pt-1">
             <HiDownload />
           </div>
         </div> */}
-        <div className="shadow-2xl px-4 lg:px-0">
+        <div className="shadow-2xl px-4 lg:px-0 sm:mb-20">
           <Image
             src={`https:${posts[0].fields.resumePic.fields.file.url}`}
             alt="Picture of the author"

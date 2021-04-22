@@ -4,7 +4,7 @@ import Radio from "../components/Radio";
 export default function RadioPage({ posts = [] }) {
   return (
     <PageLayout title="RADIO | A.J. Kanell">
-      <h1 className="text-6xl font-sans mb-12">RADIO</h1>
+      <h1 className="text-7xl text-gray-900 font-sans mb-16 mt-2">RADIO</h1>
       <div className=" lg:w-1/2 w-full lg:px-0 px-6 space-y-20">
         {posts.map((post) => (
           <Radio
