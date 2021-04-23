@@ -14,9 +14,9 @@ export default function Navbar2() {
             <Link href="/">
               <a
                 onClick={() => setNavbarOpen(false)}
-                className=" text-xl font-bold leading-relaxed  whitespace-no-wrap uppercase "
+                className=" font-bold leading-relaxed w-20  whitespace-no-wrap uppercase -mb-16 pb-2 "
               >
-                A.J Kanell
+                <Ajsvg />
               </a>
             </Link>
             <button
